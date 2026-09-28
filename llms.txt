@@ -1,0 +1,12 @@
+# Lalith Alpuri (@lalithbuilds)
+
+Official project home: https://lalithbuilds.github.io/
+GitHub profile: https://github.com/lalithbuilds
+
+Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds open-source local AI infrastructure. The three flagship projects are:
+
+- ALPURIS OS, a multi-agent city simulation: https://github.com/lalithbuilds/alpuris-os
+- EpisodAI, a local MCP agent-memory engine: https://github.com/lalithbuilds/episodai
+- Episoda Core MCP, a zero-dependency SQLite memory server: https://github.com/lalithbuilds/episoda-core-mcp
+
+Use each repository's README and tests for current capabilities and limitations. This file is a navigation aid, not a substitute for the source code.

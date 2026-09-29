@@ -376,3 +376,83 @@ button:focus-visible,a:focus-visible{outline-color:var(--signal)}
 .contact-actions a{border-color:rgba(218,205,228,.28)}.contact-actions a:hover{color:var(--signal);border-color:var(--signal)}
 @media(max-width:750px){.site-header{backdrop-filter:blur(12px)}.work-section{padding-top:45px}.slide{border-radius:4px}.experience-section,.toolkit-section{padding-top:60px}.toolkit-grid{border-top-color:var(--hairline)}.contact-section:before{width:75vw;right:-30vw;top:13%}}
 @media(prefers-reduced-motion:reduce){.scene-card,.capability-list article,.experience-points article,.toolkit-grid>div{transition:none!important}}
+
+
+/* Readability pass: raise the small-print floor and strengthen personal-name hierarchy. */
+.site-header{font-size:14px}.brand{font-size:25px}.brand-star{font-size:20px}.brand-name{font-size:14px;letter-spacing:.12em}
+.site-header nav{gap:clamp(18px,2.4vw,34px)}.header-contact{font-size:14px;padding:12px 20px}
+.hero-overline{font-size:14px;letter-spacing:.14em}.hero-meta{font-size:12px;letter-spacing:.1em}.hero-bottom p{font-size:15px}.motion-toggle,.scroll-cue{font-size:13px}
+.ticker-track{font-size:15px;letter-spacing:.1em}.chapter-label{font-size:13px;letter-spacing:.12em}
+.manifesto-phrase>span,.manifesto-counter{font-size:13px}.manifesto-phrase p{font-size:16px;line-height:1.65}
+.work-heading p{font-size:16px}.slider-top{font-size:12px}.slide-label{font-size:12px}.slide-copy p{font-size:16px;line-height:1.72}.slide-tags span{font-size:11px;padding:8px 11px}.slide-copy>a{font-size:15px}.slider-tabs button{font-size:13px;padding:12px 17px}.slider-arrows button{font-size:25px}
+.art-card span{font-size:11px}.art-card small{font-size:11px}.art-caption,.city-caption{font-size:12px}
+.lab-intro p{font-size:13px}.lab-intro>span{font-size:16px}.lab-stage-copy p{font-size:16px;line-height:1.75}.orbit-tag{font-size:12px;padding:11px 15px}.lab-specs small{font-size:12px}
+.capability-list article span{font-size:14px}.capability-list article h3{font-size:clamp(38px,4vw,68px)}.capability-list article p{font-size:16px;line-height:1.75}
+.experience-head>div span,.experience-points article span{font-size:12px;letter-spacing:.1em}.experience-head>div p{font-size:16px}.sim-top{font-size:12px}.sim-bottom{font-size:11px}.experience-points article p{font-size:16px;line-height:1.75}
+.toolkit-grid h3{font-size:13px}.toolkit-grid p{font-size:16px;line-height:1.75}.resume-teaser-copy>p{font-size:13px}.resume-teaser-copy>span{font-size:16px;line-height:1.75}.resume-teaser-copy a{font-size:15px}.contact-section>p{font-size:16px}.contact-actions a{font-size:16px}.contact-section footer{font-size:12px}
+.engine-face span,.engine-face small{font-size:10px;letter-spacing:.09em}.engine-readout{font-size:10px;letter-spacing:.1em;padding:9px 12px}
+.sentinel-reactor-face small,.sentinel-reactor-face span{font-size:10px;letter-spacing:.12em}.sentinel-node{width:120px;min-height:92px;padding:13px 14px}.sentinel-node small,.sentinel-node span{font-size:9px;letter-spacing:.1em}.sentinel-node b{font-size:29px}.sentinel-node--reflex b{font-size:24px}.sentinel-readout{font-size:9px;letter-spacing:.1em;padding:9px 12px}
+@media(max-width:750px){.site-header{font-size:12px}.site-header nav{gap:14px}.site-header nav a:nth-child(2){display:none}.brand{font-size:23px}.brand-name{display:inline;font-size:11px;margin-left:9px;letter-spacing:.08em}.header-contact{font-size:12px;padding:10px 14px}.hero-overline{font-size:12px;letter-spacing:.1em}.hero-meta{font-size:11px}.hero-bottom p{font-size:13px}.motion-toggle,.scroll-cue{font-size:11px}.chapter-label{font-size:11px;letter-spacing:.09em}.manifesto-phrase>span,.manifesto-counter{font-size:11px}.manifesto-phrase p{font-size:14px}.work-heading p{font-size:15px}.slider-top{font-size:11px}.slide-label{font-size:11px}.slide-copy p{font-size:15px}.slide-tags span{font-size:10px}.slide-copy>a{font-size:14px}.slider-tabs button{font-size:11px;padding:10px 13px}.art-card span,.art-card small{font-size:9px}.lab-intro p{font-size:11px}.lab-intro>span{font-size:14px}.lab-stage-copy p{font-size:15px}.orbit-tag{font-size:10px;padding:9px 12px}.lab-specs small{font-size:10px}.capability-list article span{font-size:12px}.capability-list article p{font-size:15px}.experience-head>div span,.experience-points article span{font-size:11px}.experience-head>div p,.experience-points article p{font-size:15px}.sim-top{font-size:10px}.sim-bottom{font-size:10px}.toolkit-grid h3{font-size:12px}.toolkit-grid p{font-size:15px}.resume-teaser-copy>p{font-size:11px}.resume-teaser-copy>span{font-size:15px}.resume-teaser-copy a{font-size:14px}.contact-section>p{font-size:15px}.contact-actions a{font-size:15px}.contact-section footer{font-size:10px}.engine-face span,.engine-face small{font-size:9px}.engine-readout{font-size:8px;padding:8px 10px}.sentinel-reactor-face small,.sentinel-reactor-face span{font-size:9px}.sentinel-node{width:100px;min-height:82px;padding:10px}.sentinel-node small,.sentinel-node span{font-size:8px}.sentinel-node b{font-size:26px}.sentinel-node--reflex b{font-size:21px}.sentinel-readout{font-size:8px;padding:8px 10px}}
+@media(max-width:480px){.hero-overline{font-size:11px}.brand-name{font-size:10px}.chapter-label{font-size:10px}.hero-bottom p{font-size:12px}.manifesto-phrase p{font-size:13px}.slide-art{height:370px}.slide-copy{padding:24px}.slide-copy p{font-size:14px}.slide-tags span{font-size:9px}.slider-controls{gap:14px;align-items:flex-start}.slider-tabs{gap:6px}.slider-tabs button{font-size:10px;padding:9px 10px}.slider-arrows button{width:40px;height:40px}.art-card span,.art-card small{font-size:8px}.lab-stage-copy p{font-size:14px}.orbit-tag{font-size:9px;padding:8px 10px}.lab-specs small{font-size:9px}.lab-specs div{padding:20px 8px}.lab-specs span{font-size:34px}.capability-list article{grid-template-columns:34px 1fr;gap:10px}.capability-list article h3{font-size:36px}.capability-list article p{font-size:14px}.sim-bottom{font-size:9px}.toolkit-grid p{font-size:14px}.resume-teaser-copy>span{font-size:14px}.contact-section footer{font-size:9px}.engine-cube{--engine-size:clamp(122px,31vw,146px)}.engine-face{padding:9px}.engine-face span,.engine-face small{font-size:8px;letter-spacing:.06em}.engine-readout{font-size:7px;padding:7px 8px}.sentinel-reactor{width:170px}.sentinel-reactor-face small,.sentinel-reactor-face span{font-size:8px}.sentinel-node{width:94px;min-height:76px;padding:9px}.sentinel-node small,.sentinel-node span{font-size:7px}.sentinel-node b{font-size:24px}.sentinel-node--reflex b{font-size:19px}.sentinel-readout{font-size:7px;padding:7px 8px}.sentinel-readout--left{left:2%}.sentinel-readout--right{right:2%}}
+@media(max-width:360px){.brand-name{font-size:9px;margin-left:6px}.site-header{gap:8px;padding-inline:4vw}.header-contact{padding:9px 10px}.chapter-label{font-size:9px}.engine-face span,.engine-face small{font-size:7px}.sentinel-node{width:84px}.sentinel-readout{letter-spacing:.04em}}
+
+/* Keep technical annotations legible instead of treating them as decorative microtype. */
+.engine-face span,.engine-face small{font-size:11px;letter-spacing:.07em}
+.engine-readout{font-size:11px}
+.sentinel-reactor-face small,.sentinel-reactor-face span{font-size:11px}
+.sentinel-node small,.sentinel-node span{font-size:10px;letter-spacing:.06em}
+.sentinel-readout{font-size:10px}
+@media(max-width:750px){
+  .header-contact{white-space:nowrap;min-width:max-content;gap:9px}
+  .art-card span,.art-card small{font-size:10px}
+  .sim-bottom{font-size:10px}
+  .lab-specs small{font-size:11px}
+  .engine-face span,.engine-face small{font-size:10px;letter-spacing:.05em}
+  .engine-readout{font-size:9px;letter-spacing:.06em}
+  .sentinel-reactor-face small,.sentinel-reactor-face span{font-size:10px}
+  .sentinel-node{width:104px;min-height:84px;padding:10px}
+  .sentinel-node small,.sentinel-node span{font-size:9px;letter-spacing:.04em}
+  .sentinel-readout{font-size:9px;letter-spacing:.06em}
+}
+@media(max-width:480px){
+  .engine-face span,.engine-face small{font-size:9px;letter-spacing:.03em}
+  .engine-readout{font-size:8px;letter-spacing:.04em}
+  .sentinel-reactor-face small,.sentinel-reactor-face span{font-size:9px}
+  .sentinel-node{width:100px;min-height:80px;padding:9px}
+  .sentinel-node small,.sentinel-node span{font-size:8px;letter-spacing:.03em}
+  .sentinel-readout{font-size:8px;letter-spacing:.04em}
+  .header-contact{padding-inline:11px}
+}
+@media(max-width:480px){
+  .engine-face span,.engine-face small{font-size:10px;letter-spacing:.02em}
+  .engine-readout{font-size:9px;letter-spacing:.03em}
+  .sentinel-reactor-face small,.sentinel-reactor-face span{font-size:10px}
+  .sentinel-node small,.sentinel-node span{font-size:9px;letter-spacing:.02em}
+  .sentinel-readout{font-size:9px;letter-spacing:.03em}
+  .slide-tags span,.contact-section footer{font-size:10px}
+}
+/* Make the portfolio owner unmistakable and keep mobile annotations readable. */
+.brand-name{font-size:16px;letter-spacing:.1em}
+.hero-overline{font-size:15px;letter-spacing:.12em}
+@media(max-width:750px){.brand-name{font-size:12px;letter-spacing:.06em}.hero-overline{font-size:13px;letter-spacing:.08em}.engine-cube{--engine-size:clamp(140px,36vw,168px)}.engine-face span,.engine-face small{font-size:10px}.engine-readout{font-size:9px}.sentinel-node small,.sentinel-node span{font-size:10px;letter-spacing:0}.sentinel-readout{font-size:9px}.contact-section footer{font-size:11px}}
+@media(max-width:480px){.brand-name{font-size:11px}.hero-overline{font-size:12px}.engine-cube{--engine-size:clamp(136px,36vw,148px)}.sentinel-node{width:104px}.sentinel-node small,.sentinel-node span{font-size:9px}.contact-section footer{font-size:10px}}
+@media(max-width:480px){
+  .brand-name{font-size:12px}
+  .hero-overline{font-size:13px}
+  .chapter-label{font-size:11px}
+  .engine-face span,.engine-face small{font-size:10px;letter-spacing:.02em}
+  .engine-readout{font-size:10px;letter-spacing:.02em}
+  .sentinel-reactor-face small,.sentinel-reactor-face span{font-size:10px}
+  .sentinel-node small,.sentinel-node span{font-size:10px;letter-spacing:0}
+  .sentinel-readout{font-size:10px;letter-spacing:.02em}
+}
+@media(max-width:360px){.brand-name{font-size:10px}.hero-overline{font-size:12px}.chapter-label{font-size:10px}}
+@media(max-width:360px){
+  .site-header nav{display:none}
+  .site-header{gap:6px;padding-inline:12px}
+  .header-contact{margin-left:auto}
+  .hero-actions{gap:10px;font-size:11px;flex-wrap:wrap}
+  .hero-actions .hero-primary{padding:11px 13px;white-space:nowrap;flex-shrink:0}
+  .hero-actions>a:not(.hero-primary){white-space:nowrap}
+}
+@media(max-width:360px){.brand-name{font-size:12px}}

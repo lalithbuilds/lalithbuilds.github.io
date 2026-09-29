@@ -3,12 +3,12 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const body = document.body;
   const scene = document.getElementById('hero-scene');
-  const wraps = [...scene.querySelectorAll('.scene-wrap')];
+  const wraps = [scene.querySelector('.portrait-stage')].filter(Boolean);
   const motion = document.getElementById('motion-toggle');
-  // The owner explicitly asked for an animated portfolio. Keep motion on by
-  // default, while leaving a clear pause control available to every visitor.
-  let manualMotion = reduced.matches;
-  let motionOff = false;
+  // Respect each visitor's reduced-motion preference until they explicitly
+  // choose Play; the visible control remains available in either state.
+  let manualMotion = false;
+  let motionOff = reduced.matches;
   let pointerX = 0, pointerY = 0, currentX = 0, currentY = 0;
   const updateMotion = () => {
     body.classList.toggle('motion-off', motionOff);
@@ -65,7 +65,13 @@
     clearTimeout(transitionTimer);
     if (active < 0 || motionOff) { commitSlide(next, focus); return; }
     slider.classList.add('is-changing');
-    transitionTimer = setTimeout(() => commitSlide(next, focus), 560);
+    const incoming = slides[next];
+    incoming.classList.add('entering');
+    requestAnimationFrame(() => requestAnimationFrame(() => incoming.classList.add('entering-now')));
+    transitionTimer = setTimeout(() => {
+      slides.forEach(slide => slide.classList.remove('entering', 'entering-now'));
+      commitSlide(next, focus);
+    }, 560);
   }
   document.getElementById('slide-prev').addEventListener('click', () => go(active - 1));
   document.getElementById('slide-next').addEventListener('click', () => go(active + 1));
@@ -112,29 +118,8 @@
   const hero = document.querySelector('.hero');
   const clamp01 = value => Math.min(Math.max(value, 0), 1);
   const ease = value => { const t = clamp01(value); return t * t * (3 - 2 * t); };
-  // Split the large chapter titles into independently moving glyphs. The
-  // heading's aria-label preserves a single readable phrase for assistive tech.
-  phrases.forEach(phrase => {
-    const heading = phrase.querySelector('h2');
-    heading.setAttribute('aria-label', heading.textContent.replace(/\s+/g, ' ').trim());
-    let glyphIndex = 0;
-    const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
-    const textNodes = [];
-    while (walker.nextNode()) textNodes.push(walker.currentNode);
-    textNodes.forEach(node => {
-      const fragment = document.createDocumentFragment();
-      for (const character of node.nodeValue) {
-        if (/\s/.test(character)) { fragment.append(document.createTextNode(character)); continue; }
-        const glyph = document.createElement('span');
-        glyph.className = 'manifesto-glyph';
-        glyph.textContent = character;
-        glyph.style.setProperty('--glyph-index', glyphIndex++);
-        fragment.append(glyph);
-      }
-      node.replaceWith(fragment);
-    });
-    phrase._glyphs = [...heading.querySelectorAll('.manifesto-glyph')];
-  });
+  // Keep the chapter copy as normal readable text. The scene transition
+  // animates whole phrases instead of hundreds of independently blurred nodes.
   function updateScenes() {
     const heroProgress = Math.min(Math.max(scrollY / Math.max(hero.offsetHeight, 1), 0), 1);
     if (!motionOff && (!reduced.matches || manualMotion)) {
@@ -154,7 +139,7 @@
       // Start the next panel just before the previous one vanishes so a
       // coarse wheel/touch scroll never lands on an empty frame.
       const opacity = phase < -.12 ? 0 : 1 - exit;
-      const y = 42 * (1 - entrance) - 86 * exit;
+      const y = 72 * (1 - entrance) - 260 * exit;
       const scale = .9 + .1 * entrance + .08 * exit;
       const blur = 8 * (1 - entrance) + 13 * exit;
       item.style.setProperty('--panel-opacity', opacity.toFixed(3));
@@ -162,18 +147,6 @@
       item.style.setProperty('--panel-scale', scale.toFixed(3));
       item.style.setProperty('--panel-blur', `${blur.toFixed(1)}px`);
       item.setAttribute('aria-hidden', String(opacity < .45));
-      item._glyphs.forEach((glyph, glyphIndex) => {
-        const delayIn = glyphIndex * .004;
-        const delayOut = (item._glyphs.length - glyphIndex - 1) * .0025;
-        const glyphIn = ease((phase - delayIn + .1) / .2);
-        const glyphOut = ease((phase - .86 - delayOut) / .14);
-        const glyphOpacity = glyphIn * (1 - glyphOut);
-        const glyphY = 20 * (1 - glyphIn) - 44 * glyphOut;
-        const glyphBlur = 3 * (1 - glyphIn) + 8 * glyphOut;
-        glyph.style.setProperty('--glyph-opacity', glyphOpacity.toFixed(3));
-        glyph.style.setProperty('--glyph-y', `${glyphY.toFixed(1)}px`);
-        glyph.style.setProperty('--glyph-blur', `${glyphBlur.toFixed(1)}px`);
-      });
     });
     stepLabel.textContent = `0${index + 1}`;
     chapterFill.style.setProperty('--manifesto-fill', `${Math.round(chapter * 100)}%`);
@@ -184,7 +157,6 @@
       rayObject.style.setProperty('--ray-rise', `${(-rayProgress * 70).toFixed(1)}px`);
       rayObject.style.setProperty('--ray-scale', (1 + rayProgress * .08).toFixed(3));
       rayObject.style.opacity = (1 - Math.max(rayProgress - .73, 0) * 2.5).toFixed(3);
-      orbit.style.setProperty('--orbit-rotate', `${Math.round(chapter * 190)}deg`);
       orbit.style.setProperty('--orbit-scale', (1 + chapter * .32).toFixed(3));
       orbit.style.setProperty('--chapter-progress', chapter.toFixed(3));
     }

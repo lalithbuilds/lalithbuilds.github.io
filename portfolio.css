@@ -50,3 +50,92 @@
 .manifesto-phrase p{margin:0;max-width:390px;}
 @media(max-width:750px){.manifesto-orbit{left:50%;top:25%;width:60vw;height:60vw}.manifesto-phrase,.manifesto-phrase.active{inset:auto 3.4vw 8%;width:auto}.manifesto-phrase h2{font-size:clamp(60px,12vw,95px)}.manifesto-phrase p{max-width:320px}}
 @media(max-width:480px){.manifesto-phrase,.manifesto-phrase.active{bottom:8%}.manifesto-phrase h2{font-size:clamp(57px,13vw,76px)}}
+/* Keep the manual carousel change in one continuous scene instead of fading
+   the outgoing panel to an empty gap before the new panel appears. */
+.slider{position:relative}
+.slide.entering{position:absolute;inset:48px 0 auto;z-index:3;width:100%;opacity:0;transform:translate3d(0,35px,-80px) rotateY(-7deg) scale(.97);filter:blur(10px);pointer-events:none;animation:none}
+.slide.entering-now{opacity:1;transform:translate3d(0,0,0) rotateY(0) scale(1);filter:blur(0)}
+.slide:not(.active):not(.entering){display:none!important}
+.contact-actions{max-width:760px;column-gap:34px;row-gap:22px}
+.contact-actions a{min-width:min(310px,100%);transition:color .25s,border-color .25s,transform .25s}
+.contact-actions a:hover{color:var(--lavender);border-color:var(--lavender);transform:translateY(-2px)}
+/* Editorial portrait-led hero: the photo remains the real photographic
+   subject while depth, light, and scroll provide the motion. */
+.hero{height:max(760px,100svh);min-height:760px;padding:142px 3.4vw 118px;background:radial-gradient(ellipse at 77% 40%,rgba(71,44,67,.3),transparent 42%),#09090d}
+.hero:before{width:45vw;height:45vw;left:auto;right:4%;top:15%;background:radial-gradient(circle,rgba(163,121,166,.18),rgba(123,92,112,.08) 35%,transparent 68%);filter:blur(30px)}
+.hero-copy{position:relative;z-index:6;width:min(55%,720px);padding-top:clamp(30px,7vh,76px)}
+.hero-overline{font-size:10px;letter-spacing:.19em;color:#c7bdc9}
+.hero h1{white-space:normal;font-size:clamp(76px,9.3vw,144px);line-height:.82;letter-spacing:-.065em;margin:34px 0 0;max-width:700px}
+.hero h1 .title-italic{font-style:italic;color:#d5b8e5;margin:10px 0 0;letter-spacing:-.055em}
+.hero-deck{max-width:445px;margin:28px 0 0;color:#c1bac5;font-size:16px;line-height:1.75}
+.hero-actions{display:flex;align-items:center;gap:27px;margin-top:31px;font-size:13px}
+.hero-actions a{display:inline-flex;gap:12px;align-items:center;transition:color .25s,transform .25s}
+.hero-actions a:hover{color:#e5c9f2;transform:translateY(-2px)}
+.hero-actions .hero-primary{background:#e7d5ed;color:#17121a;padding:13px 18px;border-radius:30px;font-weight:600}
+.hero-actions .hero-primary:hover{background:#f3e7f7;color:#17121a}
+.hero-meta{display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid rgba(211,194,219,.2);max-width:550px;margin-top:48px;padding-top:15px;color:#978d9c;font-size:9px;letter-spacing:.13em}
+.hero-scene{position:absolute;z-index:3;inset:84px 0 0 auto;width:51%;height:calc(100% - 84px);perspective:1200px;filter:blur(var(--hero-blur,0px));transform:translate3d(0,var(--hero-drift,0px),0) scale(var(--hero-scale,1));transition:filter .15s linear,transform .15s linear;pointer-events:auto;overflow:visible}
+.portrait-aura{position:absolute;width:86%;aspect-ratio:1;right:-4%;top:8%;border-radius:50%;background:radial-gradient(circle,rgba(183,141,183,.19),rgba(124,91,132,.08) 42%,transparent 70%);filter:blur(14px);animation:auraBreathe 8s ease-in-out infinite}
+.portrait-orbit{position:absolute;right:3%;top:15%;width:min(43vw,555px);aspect-ratio:1;border:1px solid rgba(221,199,230,.15);border-radius:50%;transform:rotate(var(--orbit-angle,0deg)) scale(var(--orbit-scale,1));animation:orbitDrift 34s linear infinite}
+.portrait-orbit:before,.portrait-orbit:after{content:'';position:absolute;inset:8%;border:1px solid rgba(221,199,230,.1);border-radius:50%;transform:rotate(-35deg) scaleX(.64)}
+.portrait-orbit:after{inset:-4% 18% 18% -4%;border-color:rgba(219,180,151,.19);transform:rotate(38deg) scaleX(.52)}
+.portrait-orbit--two{right:17%;top:31%;width:min(24vw,310px);border-style:dashed;border-color:rgba(231,212,238,.13);animation-duration:49s;animation-direction:reverse}
+.portrait-stage{position:absolute;right:4%;bottom:2%;width:min(47vw,630px);height:min(78vh,690px);margin:0;transform:translate3d(var(--px,0px),var(--py,0px),0);transition:transform .45s cubic-bezier(.2,.8,.2,1);will-change:transform}
+.hero-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 16%;filter:drop-shadow(0 28px 54px rgba(0,0,0,.45));transform-origin:50% 92%;animation:portraitLift 7.5s ease-in-out infinite}
+.portrait-stage:before{content:'';position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(112deg,transparent 31%,rgba(236,213,255,.08) 47%,transparent 62%);background-size:220% 100%;mix-blend-mode:screen;animation:portraitSweep 12s ease-in-out infinite}
+.portrait-stage:after{content:'';position:absolute;z-index:1;inset:58% 0 0;pointer-events:none;background:linear-gradient(0deg,rgba(8,7,11,.46),transparent 82%)}
+.portrait-stage figcaption{position:absolute;z-index:2;bottom:8%;left:8%;right:4%;display:flex;justify-content:space-between;gap:12px;color:rgba(247,239,249,.8);font-size:9px;letter-spacing:.14em;text-shadow:0 2px 12px rgba(0,0,0,.75)}
+.portrait-index,.portrait-signal{position:absolute;z-index:4;font-size:9px;letter-spacing:.16em;color:#cfc0d2}
+.portrait-index{top:8%;right:4%}.portrait-signal{top:18%;left:2%;display:flex;align-items:center;gap:8px;color:#c7b7c9}
+.portrait-signal i{width:6px;height:6px;border-radius:50%;background:#b8d9b9;box-shadow:0 0 12px #a5ddb0}
+.hero-bottom{left:3.4vw;right:3.4vw;bottom:28px;z-index:8}
+.hero-bottom p{color:#aaa1af;font-size:12px}
+.motion-off .hero-portrait,.motion-off .portrait-aura,.motion-off .portrait-orbit,.motion-off .portrait-stage:before{animation-play-state:paused!important}
+@keyframes portraitLift{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-9px) scale(1.012)}}
+@keyframes auraBreathe{0%,100%{opacity:.58;transform:scale(.96)}50%{opacity:.9;transform:scale(1.05)}}
+@keyframes orbitDrift{to{rotate:360deg}}
+@keyframes portraitSweep{0%,16%{background-position:190% 0}74%,100%{background-position:-100% 0}}
+@media(prefers-reduced-motion:reduce){.hero-portrait,.portrait-aura,.portrait-orbit,.portrait-stage:before{animation:none}body.force-motion .hero-portrait{animation:portraitLift 7.5s ease-in-out infinite!important}body.force-motion .portrait-aura{animation:auraBreathe 8s ease-in-out infinite!important}body.force-motion .portrait-orbit{animation:orbitDrift 34s linear infinite!important}body.force-motion .portrait-stage:before{animation:portraitSweep 12s ease-in-out infinite!important}}
+@media(max-width:750px){
+  .hero{height:auto;min-height:1080px;padding:116px 7vw 115px}
+  .hero:before{width:95vw;height:95vw;right:-12%;top:38%}
+  .hero-copy{width:100%;padding-top:12px}
+  .hero h1{font-size:clamp(66px,14.5vw,104px);margin-top:28px;max-width:620px}
+  .hero-deck{font-size:15px;max-width:460px;margin-top:22px}
+  .hero-meta{margin-top:30px;gap:14px 24px}
+  .hero-scene{inset:430px 0 74px auto;width:100%;height:auto;transform:translate3d(0,var(--hero-drift,0px),0) scale(var(--hero-scale,1))}
+  .portrait-stage{right:1%;bottom:0;width:min(91vw,500px);height:min(560px,57vh)}
+  .portrait-orbit{right:3%;top:2%;width:min(83vw,430px)}
+  .portrait-orbit--two{right:14%;top:18%;width:min(48vw,260px)}
+  .portrait-signal{top:9%;left:5%}.portrait-index{top:2%;right:5%}
+  .hero-bottom{left:7vw;right:7vw;bottom:23px}
+  .hero-bottom p{font-size:10px;max-width:210px}
+  .hero-bottom>div{gap:12px}
+}
+@media(max-width:480px){
+  .hero{min-height:1030px;padding-top:105px}
+  .hero h1{font-size:clamp(62px,15vw,78px)}
+  .hero-deck{max-width:96%;font-size:14px}
+  .hero-actions{gap:19px;font-size:12px}
+  .hero-meta{font-size:8px}
+  .hero-scene{top:425px;bottom:83px}
+  .portrait-stage{height:480px;width:94vw;right:-3%}
+  .portrait-stage figcaption{font-size:7px}
+  .hero-bottom{align-items:end}.hero-bottom p{display:none}.hero-bottom>div{width:100%;justify-content:space-between}
+}
+/* Replace glossy spheres and per-character blur with a quieter technical
+   signal diagram; keep the scroll chapter title crisp at every position. */
+.manifesto-orbit{filter:none}
+.manifesto-orbit{transform:translate(-50%,-50%) scale(var(--orbit-scale,1))}
+.manifesto-orbit-ring{border-color:rgba(225,207,232,.27);box-shadow:0 0 0 55px rgba(220,199,230,.018),0 0 0 115px rgba(220,199,230,.012)}
+.manifesto-orbit-core{width:16%;background:rgba(217,192,229,.07);border:1px solid rgba(225,207,232,.52);color:#e0c4ef;box-shadow:0 0 34px rgba(203,162,223,.12);backdrop-filter:blur(4px);font-size:clamp(25px,3vw,42px)}
+.manifesto-orbit .manifesto-satellite{width:9px!important;background:#d5b8e5;box-shadow:0 0 12px rgba(213,184,229,.65);border:0}
+.manifesto-orbit .sat-b{width:7px!important}.manifesto-orbit .sat-c{width:6px!important}
+.manifesto-phrase,.manifesto-phrase.active{filter:none!important;transform:translate3d(0,calc(var(--panel-y,0px) * .55),0) scale(var(--panel-scale,1));will-change:opacity,transform}
+.manifesto-phrase h2{text-shadow:0 6px 24px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){.manifesto-orbit-ring{animation:none}}
+
+/* Dark-room portrait grade: keep Lalith's real photograph while toning down
+   the bright room and integrating the full frame into the charcoal hero. */
+.hero-portrait{filter:brightness(.76) contrast(1.12) saturate(.82) drop-shadow(0 28px 54px rgba(0,0,0,.52))}
+.portrait-stage:after{background:linear-gradient(0deg,rgba(5,6,10,.58),transparent 75%),radial-gradient(ellipse at 50% 42%,transparent 38%,rgba(5,6,10,.24) 100%)}

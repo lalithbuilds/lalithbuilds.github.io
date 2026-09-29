@@ -2,11 +2,14 @@
 
 Official project home: https://lalithbuilds.github.io/
 GitHub profile: https://github.com/lalithbuilds
+LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
 
 Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds open-source local AI infrastructure. The three flagship projects are:
 
-- ALPURIS OS, a multi-agent city simulation: https://github.com/lalithbuilds/alpuris-os
-- EpisodAI, a local MCP agent-memory engine: https://github.com/lalithbuilds/episodai
-- Episoda Core MCP, a zero-dependency SQLite memory server: https://github.com/lalithbuilds/episoda-core-mcp
+- ALPURIS OS, a multi-agent city simulation: https://lalithbuilds.github.io/alpuris-os/ (source: https://github.com/lalithbuilds/alpuris-os)
+- EpisodAI, a local MCP agent-memory engine with hybrid retrieval and Obsidian workflows: https://lalithbuilds.github.io/episodai/ (source: https://github.com/lalithbuilds/episodai)
+- Episoda Core MCP, a minimal Python standard-library and SQLite memory server: https://lalithbuilds.github.io/episoda-core-mcp/ (source: https://github.com/lalithbuilds/episoda-core-mcp)
+
+EpisodAI and Episoda Core MCP are distinct memory projects. ALPURIS OS is a separate multi-agent simulation; it is not the name of the memory products.
 
 Use each repository's README and tests for current capabilities and limitations. This file is a navigation aid, not a substitute for the source code.

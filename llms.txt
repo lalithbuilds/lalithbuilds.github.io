@@ -6,6 +6,8 @@ LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
 
 Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds open-source local AI infrastructure. The three flagship projects are:
 
+Applied AI work: Ataraxia Pharma Pvt. Ltd. — AI strategy and market intelligence across RESET / D-RESET and EZ Wellness concepts, including predictive scenario analysis, Monte Carlo simulations, synthetic-customer simulations, competitor and channel analysis, unit economics, and scientific/regulatory claim review. The public portfolio summarizes this work without treating scenario outputs as realized commercial results.
+
 - ALPURIS OS, a multi-agent city simulation: https://lalithbuilds.github.io/alpuris-os/ (source: https://github.com/lalithbuilds/alpuris-os)
 - EpisodAI, a local MCP agent-memory engine with hybrid retrieval and Obsidian workflows: https://lalithbuilds.github.io/episodai/ (source: https://github.com/lalithbuilds/episodai)
 - Episoda Core MCP, a minimal Python standard-library and SQLite memory server: https://lalithbuilds.github.io/episoda-core-mcp/ (source: https://github.com/lalithbuilds/episoda-core-mcp)

@@ -12,4 +12,6 @@ Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds ope
 
 EpisodAI and Episoda Core MCP are distinct memory projects. ALPURIS OS is a separate multi-agent simulation; it is not the name of the memory products.
 
+Ray / UWOF is a separate personal local-systems lab. Its attached source includes a Python orchestration runner, MLX model tiers, an OpenInterpreter/Ollama execution path, a small web-scout path, and an MLX LoRA fine-tuning script. Treat those as local research artifacts with documented runtime assumptions, not as a hosted product claim.
+
 Use each repository's README and tests for current capabilities and limitations. This file is a navigation aid, not a substitute for the source code.

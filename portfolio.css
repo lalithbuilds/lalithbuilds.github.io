@@ -27,3 +27,26 @@
 .hero-scene{filter:blur(var(--hero-blur,0px))}.slider .slide.active{transition:opacity .26s ease,transform .26s ease,filter .26s ease}.slider.is-changing .slide.active{opacity:0;transform:scale(.96) rotateY(5deg);filter:blur(12px)}.ray-object{transform:translateY(var(--ray-rise,0px)) scale(var(--ray-scale,1));transition:transform .18s linear,opacity .18s linear}
 @media(max-width:480px){.hero-scene{inset:32% -5% 16%;transform:scale(.86)}.scene-wrap--left{left:-4%;top:31%}.scene-wrap--back{left:16%;top:36%}.scene-wrap--center{left:37%;top:31%}.scene-wrap--right{right:-1%;top:30%}}
 .hero-scene{pointer-events:auto}.hero-scene .scene-wrap{pointer-events:none}
+/* Continuous, scroll-scrubbed chapter transitions: each phrase enters from
+   depth, hangs in the frame, then dissolves upward before the next arrives. */
+.manifesto{height:360vh}
+.manifesto-phrase{opacity:var(--panel-opacity,0);transform:translate3d(0,var(--panel-y,74px),-90px) scale(var(--panel-scale,.9)) rotateX(7deg);filter:blur(var(--panel-blur,15px));transform-origin:50% 68%;transition:none;will-change:opacity,transform,filter;backface-visibility:hidden}
+.manifesto-phrase.active{opacity:var(--panel-opacity,0);transform:translate3d(0,var(--panel-y,74px),-90px) scale(var(--panel-scale,.9)) rotateX(7deg);filter:blur(var(--panel-blur,15px))}
+.manifesto-phrase h2{perspective:900px}
+.manifesto-glyph{display:inline-block;opacity:var(--glyph-opacity,0);transform:translate3d(0,var(--glyph-y,27px),0) rotateX(14deg);filter:blur(var(--glyph-blur,7px));will-change:opacity,transform,filter;backface-visibility:hidden}
+.manifesto-orbit{transition:none;will-change:transform;}
+.manifesto-orbit-ring{transform:scale(calc(.83 + var(--chapter-progress,0) * .42));opacity:calc(1 - var(--chapter-progress,0) * .25)}
+.manifesto-counter i{transition:none}
+.slide{animation:slideIn .72s cubic-bezier(.16,1,.3,1) both}
+@keyframes slideIn{from{opacity:.05;transform:translate3d(0,44px,-100px) rotateX(8deg) scale(.94);filter:blur(12px)}to{opacity:1;transform:translate3d(0,0,0) rotateX(0) scale(1);filter:blur(0)}}
+.slider .slide.active{transition:opacity .56s ease,transform .64s cubic-bezier(.2,.8,.2,1),filter .56s ease}
+.slider.is-changing .slide.active{opacity:0;transform:translate3d(0,-42px,-90px) rotateY(9deg) rotateX(-4deg) scale(.94);filter:blur(18px)}
+@media(max-width:750px){.manifesto{height:315vh}.manifesto-phrase{transform:translate3d(0,var(--panel-y,74px),-30px) scale(var(--panel-scale,.9));}}
+@media(prefers-reduced-motion:reduce){body.force-motion .manifesto-phrase{transition:none!important}body.force-motion .manifesto-glyph{transition:none!important}body.force-motion .slide{animation-duration:.72s!important;animation-iteration-count:1!important}body.force-motion .slider .slide.active{transition:opacity .56s ease,transform .64s cubic-bezier(.2,.8,.2,1),filter .56s ease!important}}
+/* Give the pinned title and the orbital graphic separate visual lanes. */
+.manifesto-orbit{left:73%;top:46%;width:min(46vw,610px);height:min(46vw,610px)}
+.manifesto-phrase,.manifesto-phrase.active{inset:auto auto 9% 3.4vw;width:62%;}
+.manifesto-phrase h2{font-size:clamp(76px,9.5vw,145px);}
+.manifesto-phrase p{margin:0;max-width:390px;}
+@media(max-width:750px){.manifesto-orbit{left:50%;top:39%;width:85vw;height:85vw}.manifesto-phrase,.manifesto-phrase.active{inset:auto 3.4vw 8%;width:auto}.manifesto-phrase h2{font-size:clamp(60px,12vw,95px)}.manifesto-phrase p{max-width:320px}}
+@media(max-width:480px){.manifesto-phrase,.manifesto-phrase.active{bottom:8%}.manifesto-phrase h2{font-size:clamp(57px,13vw,76px)}}

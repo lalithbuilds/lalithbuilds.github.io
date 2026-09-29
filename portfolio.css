@@ -48,5 +48,5 @@
 .manifesto-phrase,.manifesto-phrase.active{inset:auto auto 9% 3.4vw;width:62%;}
 .manifesto-phrase h2{font-size:clamp(76px,9.5vw,145px);}
 .manifesto-phrase p{margin:0;max-width:390px;}
-@media(max-width:750px){.manifesto-orbit{left:50%;top:39%;width:85vw;height:85vw}.manifesto-phrase,.manifesto-phrase.active{inset:auto 3.4vw 8%;width:auto}.manifesto-phrase h2{font-size:clamp(60px,12vw,95px)}.manifesto-phrase p{max-width:320px}}
+@media(max-width:750px){.manifesto-orbit{left:50%;top:25%;width:60vw;height:60vw}.manifesto-phrase,.manifesto-phrase.active{inset:auto 3.4vw 8%;width:auto}.manifesto-phrase h2{font-size:clamp(60px,12vw,95px)}.manifesto-phrase p{max-width:320px}}
 @media(max-width:480px){.manifesto-phrase,.manifesto-phrase.active{bottom:8%}.manifesto-phrase h2{font-size:clamp(57px,13vw,76px)}}

@@ -3,7 +3,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   const body = document.body;
   const scene = document.getElementById('hero-scene');
-  const wraps = [scene.querySelector('.portrait-stage')].filter(Boolean);
+  const wraps = [...scene.querySelectorAll('.scene-wrap')];
   const motion = document.getElementById('motion-toggle');
   // Respect each visitor's reduced-motion preference until they explicitly
   // choose Play; the visible control remains available in either state.
@@ -64,6 +64,7 @@
     if (next === active) return;
     clearTimeout(transitionTimer);
     if (active < 0 || motionOff) { commitSlide(next, focus); return; }
+    slider.dataset.direction = next > active || (active === slides.length - 1 && next === 0) ? 'next' : 'prev';
     slider.classList.add('is-changing');
     const incoming = slides[next];
     incoming.classList.add('entering');
@@ -134,30 +135,35 @@
     const index = Math.min(Math.floor(chapter * phrases.length), phrases.length - 1);
     phrases.forEach((item, i) => {
       const phase = motionOff ? (i === index ? .5 : -1) : chapter * phrases.length - i;
-      const entrance = ease((phase + .1) / .23);
-      const exit = ease((phase - .88) / .12);
+      const entrance = ease((phase + .55) / .55);
+      const exit = i === phrases.length - 1 ? 0 : ease((phase - .72) / .28);
       // Start the next panel just before the previous one vanishes so a
       // coarse wheel/touch scroll never lands on an empty frame.
-      const opacity = phase < -.12 ? 0 : 1 - exit;
-      const y = 72 * (1 - entrance) - 260 * exit;
-      const scale = .9 + .1 * entrance + .08 * exit;
-      const blur = 8 * (1 - entrance) + 13 * exit;
+      const opacity = entrance * (1 - exit);
+      const y = 72 * (1 - entrance) - 220 * exit;
+      const scale = .9 + .1 * entrance - .025 * exit;
+      const blur = 8 * (1 - entrance) + 11 * exit;
+      const clipTop = Math.round(exit * 38);
+      const clipBottom = Math.round((1 - entrance) * 28);
       item.style.setProperty('--panel-opacity', opacity.toFixed(3));
       item.style.setProperty('--panel-y', `${y.toFixed(1)}px`);
       item.style.setProperty('--panel-scale', scale.toFixed(3));
       item.style.setProperty('--panel-blur', `${blur.toFixed(1)}px`);
+      item.style.setProperty('--panel-clip-top', `${clipTop}%`);
+      item.style.setProperty('--panel-clip-bottom', `${clipBottom}%`);
       item.setAttribute('aria-hidden', String(opacity < .45));
     });
     stepLabel.textContent = `0${index + 1}`;
     chapterFill.style.setProperty('--manifesto-fill', `${Math.round(chapter * 100)}%`);
     if (!motionOff && (!reduced.matches || manualMotion)) {
-      const raySection = document.querySelector('.ray-section');
-      const rayObject = document.querySelector('.ray-object');
-      const rayProgress = Math.min(Math.max((scrollY + innerHeight - raySection.offsetTop) / Math.max(raySection.offsetHeight + innerHeight, 1), 0), 1);
-      rayObject.style.setProperty('--ray-rise', `${(-rayProgress * 70).toFixed(1)}px`);
-      rayObject.style.setProperty('--ray-scale', (1 + rayProgress * .08).toFixed(3));
-      rayObject.style.opacity = (1 - Math.max(rayProgress - .73, 0) * 2.5).toFixed(3);
+      const labSection = document.querySelector('.lab-section');
+      const labObject = document.querySelector('.lab-object');
+      const labProgress = Math.min(Math.max((scrollY + innerHeight - labSection.offsetTop) / Math.max(labSection.offsetHeight + innerHeight, 1), 0), 1);
+      labObject.style.setProperty('--lab-rise', `${(-labProgress * 70).toFixed(1)}px`);
+      labObject.style.setProperty('--lab-scale', (1 + labProgress * .08).toFixed(3));
+      labObject.style.opacity = (1 - Math.max(labProgress - .73, 0) * 2.5).toFixed(3);
       orbit.style.setProperty('--orbit-scale', (1 + chapter * .32).toFixed(3));
+      orbit.style.setProperty('--orbit-rotate', `${(chapter * 18).toFixed(1)}deg`);
       orbit.style.setProperty('--chapter-progress', chapter.toFixed(3));
     }
   }

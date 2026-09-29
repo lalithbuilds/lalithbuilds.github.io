@@ -1,7 +1,7 @@
 # Lalith Alpuri — local AI systems
 
-This repository publishes [lalithbuilds.github.io](https://lalithbuilds.github.io/), the interactive portfolio of Lalith Alpuri (@lalithbuilds). Its editorial chapters cover public projects, applied AI and simulation work at Ataraxia Pharma, and the personal Ray/UWOF systems lab.
+This repository publishes [lalithbuilds.github.io](https://lalithbuilds.github.io/), Lalith Alpuri’s portfolio and [full résumé](https://lalithbuilds.github.io/resume.html). The site covers EpisodAI, Episoda Core MCP, ALPURIS OS, the personal Ray/UWOF lab, and applied AI and simulation work at Ataraxia Pharma.
 
-The site uses plain HTML, CSS, and JavaScript. Its central wire sculpture is drawn locally on Canvas and can be rotated by dragging. Project tabs support keyboard navigation, motion can be paused, and the design respects reduced-motion preferences. No Grail assets or code are used; its chapter pacing and editorial typography informed the art direction.
+The portfolio uses plain HTML, CSS, and JavaScript. It has an animated 3D card composition, a scroll-held three-part thesis, an accessible project carousel, scroll-responsive transitions, and a motion control with reduced-motion support. The résumé is available as readable HTML plus PDF and DOCX downloads. There is no build step; run `python3 -m http.server` from this directory to preview it.
 
-Project panels link to repository source. The Ataraxia section describes documented scenario datasets and analysis without treating forecasts as realized commercial outcomes. Ray/UWOF is described as personal local infrastructure based on the available runner and model files.
+Project panels link to their public source. Scenario illustrations do not represent measured business outcomes. Ray/UWOF descriptions distinguish checkpoint and adapter files from runtime validation. The art direction takes inspiration from editorial, chapter-based sites while using original layouts, copy, and graphics.

@@ -3,6 +3,7 @@
 Official project home: https://lalithbuilds.github.io/
 GitHub profile: https://github.com/lalithbuilds
 LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
+Full resume: https://lalithbuilds.github.io/resume.html (PDF: https://lalithbuilds.github.io/assets/Lalith_Alpuri_Resume.pdf)
 
 Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds open-source local AI infrastructure. The three flagship projects are:
 

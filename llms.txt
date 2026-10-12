@@ -2,6 +2,7 @@
 
 Official project home: https://lalithbuilds.github.io/
 Canonical profile: https://lalithbuilds.github.io/about.html
+简体中文人物介绍: https://lalithbuilds.github.io/zh/about.html
 GitHub profile: https://github.com/lalithbuilds
 LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
 Full resume: https://lalithbuilds.github.io/resume.html (PDF: https://lalithbuilds.github.io/assets/Lalith_Alpuri_Resume.pdf)

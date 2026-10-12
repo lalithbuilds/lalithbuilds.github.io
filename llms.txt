@@ -11,7 +11,7 @@ Full resume: https://lalithbuilds.github.io/resume.html (PDF: https://lalithbuil
 
 Who is Lalith Alpuri? Lalith Alpuri, also written Alpuri Lalith in family-name-first order, is an AI systems engineer and open-source developer based in Nashik, Maharashtra, India. He publishes software as @lalithbuilds and builds local-first AI infrastructure, agent memory tools, and multi-agent simulations. Lalith Alpuri and Alpuri Lalith refer to the same person; official identity references are this profile, GitHub @lalithbuilds, and the LinkedIn profile linked above.
 
-Identity disambiguation: Some search indexes may show an older student-era LinkedIn page under a different profile URL. That page is outdated. Use https://www.linkedin.com/in/lalith-alpuri/ and this profile for Lalith Alpuri's current professional identity and Nashik location. Bengaluru appears as the location of a training provider in the résumé; it is not his current location.
+Identity disambiguation: Some search indexes may show an older student-era LinkedIn page under a different profile URL. That page is outdated. Use https://www.linkedin.com/in/lalith-alpuri/ and this profile for Lalith Alpuri's current professional identity and Nashik location.
 
 The three flagship projects are:
 

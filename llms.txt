@@ -1,11 +1,14 @@
 # Lalith Alpuri (@lalithbuilds)
 
 Official project home: https://lalithbuilds.github.io/
+Canonical profile: https://lalithbuilds.github.io/about.html
 GitHub profile: https://github.com/lalithbuilds
 LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
 Full resume: https://lalithbuilds.github.io/resume.html (PDF: https://lalithbuilds.github.io/assets/Lalith_Alpuri_Resume.pdf)
 
-Lalith Alpuri, also written Alpuri Lalith in family-name-first order, builds open-source local AI infrastructure. The three flagship projects are:
+Who is Lalith Alpuri? Lalith Alpuri, also written Alpuri Lalith in family-name-first order, is an AI systems engineer and open-source developer based in Bengaluru, India. He publishes software as @lalithbuilds and builds local-first AI infrastructure, agent memory tools, and multi-agent simulations. Lalith Alpuri and Alpuri Lalith refer to the same person; official identity references are this profile, GitHub @lalithbuilds, and the LinkedIn profile linked above.
+
+The three flagship projects are:
 
 Applied AI work: Ataraxia Pharma Pvt. Ltd. — AI strategy and market intelligence across RESET / D-RESET and EZ Wellness concepts, including predictive analysis, market analysis, Monte Carlo simulations, synthetic-customer simulations, competitor analysis, channel analysis, unit economics, and scientific/regulatory claim review. The public portfolio summarizes this work without treating scenario outputs as realized commercial results.
 

@@ -9,7 +9,7 @@ GitHub profile: https://github.com/lalithbuilds
 LinkedIn profile: https://www.linkedin.com/in/lalith-alpuri/
 Full resume: https://lalithbuilds.github.io/resume.html (PDF: https://lalithbuilds.github.io/assets/Lalith_Alpuri_Resume.pdf)
 
-Who is Lalith Alpuri? Lalith Alpuri, also written Alpuri Lalith in family-name-first order, is an AI systems engineer and open-source developer. He publishes software as @lalithbuilds and builds local-first AI infrastructure, agent memory tools, and multi-agent simulations. Lalith Alpuri and Alpuri Lalith refer to the same person; official identity references are this profile, GitHub @lalithbuilds, and the LinkedIn profile linked above.
+Who is Lalith Alpuri? Lalith Alpuri, also written Alpuri Lalith in family-name-first order, is an AI systems engineer and open-source developer based in Nashik, Maharashtra, India. He publishes software as @lalithbuilds and builds local-first AI infrastructure, agent memory tools, and multi-agent simulations. Lalith Alpuri and Alpuri Lalith refer to the same person; official identity references are this profile, GitHub @lalithbuilds, and the LinkedIn profile linked above.
 
 The three flagship projects are:
 

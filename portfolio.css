@@ -476,3 +476,17 @@ button:focus-visible,a:focus-visible{outline-color:var(--signal)}
 @media(max-width:850px){.portfolio-credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-credentials-head{display:block}.portfolio-credentials-head>a{display:inline-block;margin-top:20px}}
 @media(max-width:480px){.portfolio-credential-grid{gap:12px}.portfolio-credential{padding:10px}.portfolio-credential img{height:105px}.portfolio-credential strong{font-size:12px}.portfolio-credentials{margin-top:45px}}
 @media(prefers-reduced-motion:reduce){.portfolio-credential{transition:none}.portfolio-credential:hover{transform:none}}
+
+/* Keep every header link reachable. Earlier rules hid nav items by position
+   (second link under 750px, third under 480px, the whole menu under 360px),
+   which removed Work on the homepage and Résumé plus a language link on the
+   profile pages. */
+@media(max-width:750px){
+  .site-header{height:auto;min-height:66px;flex-wrap:wrap;align-items:center;row-gap:8px;padding-top:10px;padding-bottom:8px}
+  .site-header nav{display:flex;flex:1 0 100%;order:3;min-width:0;flex-wrap:wrap;overflow:visible;gap:8px 14px}
+  .site-header nav a:nth-child(n){display:inline-block;flex:0 0 auto}
+  .brand,.header-contact{flex-shrink:0}
+  .header-contact{margin-left:auto}
+  .hero{padding-top:168px}
+}
+.profile-page p a,.profile-page .profile-links a,.profile-page .profile-footer a,.profile-page .profile-breadcrumb a{text-decoration:underline;text-underline-offset:.2em}

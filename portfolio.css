@@ -482,15 +482,11 @@ button:focus-visible,a:focus-visible{outline-color:var(--signal)}
    which removed Work on the homepage and Résumé plus a language link on the
    profile pages. */
 @media(max-width:750px){
-  .site-header nav{display:flex;flex:1 1 auto;min-width:0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .site-header nav::-webkit-scrollbar{display:none}
+  .site-header{height:auto;min-height:66px;flex-wrap:wrap;align-items:center;row-gap:8px;padding-top:10px;padding-bottom:8px}
+  .site-header nav{display:flex;flex:1 0 100%;order:3;min-width:0;flex-wrap:wrap;overflow:visible;gap:8px 14px}
   .site-header nav a:nth-child(n){display:inline-block;flex:0 0 auto}
   .brand,.header-contact{flex-shrink:0}
-}
-@media(max-width:480px){
-  .site-header{height:auto;min-height:66px;flex-wrap:wrap;align-items:center;row-gap:8px;padding-top:10px;padding-bottom:8px}
-  .site-header nav{flex:1 0 100%;order:3;padding-bottom:2px}
   .header-contact{margin-left:auto}
-  .hero{padding-top:150px}
+  .hero{padding-top:168px}
 }
 .profile-page p a,.profile-page .profile-links a,.profile-page .profile-footer a,.profile-page .profile-breadcrumb a{text-decoration:underline;text-underline-offset:.2em}

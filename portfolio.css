@@ -456,3 +456,23 @@ button:focus-visible,a:focus-visible{outline-color:var(--signal)}
   .hero-actions>a:not(.hero-primary){white-space:nowrap}
 }
 @media(max-width:360px){.brand-name{font-size:12px}}
+
+/* Portfolio credential overview */
+.portfolio-credentials{margin:70px 3.4vw 0;padding-top:35px;border-top:1px solid #665870;scroll-margin-top:30px}
+.portfolio-credentials-head{display:flex;justify-content:space-between;align-items:flex-start;gap:25px;margin-bottom:28px}
+.portfolio-credentials-head p{font-size:10px;letter-spacing:.16em;margin:0 0 12px}
+.portfolio-credentials-head h3{font:400 clamp(32px,4vw,58px)/1.1 'Instrument Serif',Georgia,serif;margin:0 0 12px}
+.portfolio-credentials-head span{font-size:12px;line-height:1.6;display:block}
+.portfolio-credentials-head>a{white-space:nowrap;font-size:12px;border-bottom:1px solid currentColor;padding-bottom:5px}
+.portfolio-credential-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.portfolio-credential{display:flex;flex-direction:column;background:#f3efeb;color:#211927;border:1px solid #aa90b5;padding:14px;transition:transform .2s}
+.portfolio-credential:hover{transform:translateY(-4px)}
+.portfolio-credential img{width:100%;height:145px;object-fit:contain;background:#09090d}
+.portfolio-credential:nth-child(n+3) img{background:#df7757}
+.portfolio-credential>span{font-size:10px;letter-spacing:.04em;margin-top:15px}
+.portfolio-credential strong{display:block;font-size:13px;line-height:1.45;letter-spacing:0;margin-top:7px}
+.portfolio-simulations{font-size:10px;letter-spacing:.1em;line-height:1.8;margin:25px 0 0}
+.portfolio-simulations span{display:block;font-size:13px;letter-spacing:0;margin-top:5px}
+@media(max-width:850px){.portfolio-credential-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-credentials-head{display:block}.portfolio-credentials-head>a{display:inline-block;margin-top:20px}}
+@media(max-width:480px){.portfolio-credential-grid{gap:12px}.portfolio-credential{padding:10px}.portfolio-credential img{height:105px}.portfolio-credential strong{font-size:12px}.portfolio-credentials{margin-top:45px}}
+@media(prefers-reduced-motion:reduce){.portfolio-credential{transition:none}.portfolio-credential:hover{transform:none}}

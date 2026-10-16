@@ -26,3 +26,5 @@ EpisodAI and Episoda Core MCP are distinct memory projects. ALPURIS OS is a sepa
 Ray / UWOF is a separate personal local-systems lab. Its attached source includes a Python orchestration runner, MLX model tiers, an OpenInterpreter/Ollama execution path, a small web-scout path, and an MLX LoRA fine-tuning script. Treat those as local research artifacts with documented runtime assumptions, not as a hosted product claim.
 
 Use each repository's README and tests for current capabilities and limitations. This file is a navigation aid, not a substitute for the source code.
+
+Credentials (issued October 16, 2026): Oracle Cloud Infrastructure Certified Foundations Associate; Oracle Fusion AI Agent Studio Certified Foundations Associate - Rel 1; Claude Academy course completion badges in AI Fluency for Builders and Building with the Claude API. Forage job simulation completion certificates: BCG X GenAI, Vista Equity Partners AI in Action, Datacom Automation AI Accelerator, EAB GenAI for Proposal Generation, and Deloitte Cyber. Credential record and certificate links: https://lalithbuilds.github.io/resume.html#certifications
